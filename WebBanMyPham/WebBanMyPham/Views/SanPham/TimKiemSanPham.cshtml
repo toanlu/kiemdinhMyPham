@@ -1,0 +1,40 @@
+﻿@using PagedList
+@using PagedList.Mvc
+@{
+    ViewBag.Title = "Tìm kiếm sản phẩm - 3TS Shop";
+    Layout = "~/Views/Shared/_LayoutPageCommonClient.cshtml";
+}
+@model IPagedList<WebBanMyPham.Models.SanPham>
+
+<h2 class="text-center mt-3">KẾT QUẢ TÌM KIẾM<br />TỪ KHÓA: @ViewBag.TuKhoaTimKiem</h2>
+
+<div class="row">
+    @{
+        foreach (var item in Model)
+        {
+            <div class="col-4 text-center">
+                <div class="d-flex">
+                    <img class="mx-auto"  src="@Url.Content("~/Images/SP/" + item.HinhAnh)" width=70% height="200" alt="Image" />
+                </div>
+                @if (item.TenSP.Length > 30)
+                {
+                    <p class="text-center"><strong title="@item.TenSP">@item.TenSP.Substring(0, 30)...</strong></p>
+                }
+                else
+                {
+                    <p class="text-center"><strong title="@item.TenSP">@item.TenSP</strong></p>
+                }
+                <p class="text-center">Giá: <span style="color: red">@string.Format("{0:0,0 }", @item.Gia)VNĐ</span></p>
+                <a href="@Url.Action("XemChiTiet", "SanPham", new { maSP = item.Id })">Xem chi tiết</a>
+            </div>
+        }
+        @Html.PagedListPager(Model, page => Url.Action("TimKiemSanPham", new { tenSP=@ViewBag.TuKhoaTimKiem, page }),
+            new PagedListRenderOptions
+            {
+                Display = PagedListDisplayMode.IfNeeded,
+                MaximumPageNumbersToDisplay = 5,
+                LiElementClasses = new string[] { "list-group-item" },
+                UlElementClasses = new string[] { "list-group list-group-horizontal position-absolute top-50 start-50 translate-middle" }
+            })
+    }
+</div>

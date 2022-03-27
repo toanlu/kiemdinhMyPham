@@ -1,0 +1,85 @@
+﻿@model List<WebBanMyPham.Models.ThongTinNguoiDung>
+
+@{
+    ViewBag.Title = "Quản lý tài khoản - 3TS Shop";
+    Layout = "~/Views/Shared/_LayoutPageAdmin.cshtml";
+}
+
+<script>
+    function ckPW(pw, username) {
+        $(":input[name='btn_tuhueson']").prop("disabled", false);
+    }
+</script>
+<h2>Quản lý tài khoản người dùng</h2>
+@using (Html.BeginForm("QLTaiKhoan", "QuanLy", FormMethod.Post, new { @class="d-flex my-2" }))
+{
+    <input class="form-control me-1" name="txtUserName" type="search" placeholder="Search" aria-label="Search" style="width: 320px">
+    <button class="btn text-center mauChuDao" type="submit" style="height: 40px; width: 40px;">
+        <i class="fas fa-search"></i>
+    </button>
+}
+<div class="table-responsive">
+    <table class="table" id="tableData">
+        <thead class="table-success">
+            <tr>
+                <th>#</th>
+                <th>Username</th>
+                <th>Password</th>
+                <th>Họ Tên</th>
+                <th>Ngày sinh</th>
+                <th>Giới tính</th>
+                <th>Email</th>
+                <th>Số điện thoại</th>
+                <th></th>
+            </tr>
+
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Select((data, i) => new { data, i }))
+            {
+                
+                <tr>
+                    @using (Html.BeginForm("CapNhatTaiKhoan", "QuanLy", new { @username = item.data.Tk.Username }))
+                    {
+                        <td>@(item.i + 1)</td>
+
+                        <td>@item.data.Tk.Username</td>
+                        <td>
+                            <input type="password" onfocus="this.value=''" onkeyup="ckPW(this.value)" name="txtPW" value="@item.data.Tk.Pw" />
+
+                        </td>
+                        <td>
+                            <pre><p>@item.data.HoTen</p></pre>
+                        </td>
+                        <td>@item.data.NgaySinh.ToString("dd/MM/yyyy")</td>
+                        <td>@item.data.GioiTinh&emsp;&emsp;</td>
+                        <td>@item.data.Email</td>
+                        <td>@item.data.Sdt&emsp;</td>
+                        <td>
+                            <input type="submit" value="Update" class="btn btn-primary" name="btn_@item.data.Tk.Username" disabled /></td>
+                    }
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+@if (@Session["Info"] == "SUCCESS")
+{
+    <script>
+        Toast.fire({
+            icon: 'success',
+            title: '@Session["Message"]'
+        });
+    </script>
+    Session["Info"] = null;
+}
+else if (@Session["Info"] == "err")
+{
+    <script>
+        Toast.fire({
+            icon: 'warning',
+            title: '@Session["Message"]'
+        });
+    </script>
+    Session["Info"] = null;
+}

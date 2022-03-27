@@ -1,0 +1,25 @@
+﻿<a href="~/GioHang/GioHang" class="nav-link text-white txtMenuHeader" style="position:relative;">
+    <span style="font-size:24px">GIỎ HÀNG</span>
+    <div id="SoLuongGH">
+        <span>
+            @ViewBag.TongSoLuong
+        </span>
+    </div>
+</a>
+
+<style>
+    #SoLuongGH {
+        position: absolute;
+        top: 4px;
+        height: 18px;
+        width: 18px;
+        border: 1px solid;
+        text-align: center;
+        justify-content: center;
+        right: -6px;
+        align-items: center;
+        display: flex;
+        border-radius: 50%;
+        background: var(--bs-orange);
+    }
+</style>

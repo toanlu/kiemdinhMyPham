@@ -1,0 +1,91 @@
+﻿@model List<WebBanMyPham.Models.HoaDon>
+
+@{
+    ViewBag.Title = "GioHang";
+    Layout = "~/Views/Shared/_LayoutPageCommonClient.cshtml";
+}
+
+<h2 class="text-center mt-3">Giỏ hàng</h2>
+<div class="table-responsive">
+    <table class="table">
+        <thead class="table-success">
+            <tr>
+                <th>#</th>
+                <th>Sản phẩm</th>
+                <th>Hình ảnh</th>
+                <th>Số lượng</th>
+                <th>Giá</th>
+                <th>Thành tiền</th>
+                <th></th>
+                <th class="text-center">
+                    <a href="~/GioHang/XoaGioHang_All" title="Xóa tất cả">
+                        <span style="color:#000; font-size: 1.3em">
+                            <i class="fas fa-trash-alt"></i>
+                        </span>
+                    </a>
+                </th>
+                <th></th>
+            </tr>
+
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Select((data, i) => new { data, i }))
+            {
+                <tr>
+                    <td>@(item.i + 1)</td>
+
+                    @if (item.data.Sp.TenSP.Length > 30)
+                    {
+                        <td>@item.data.Sp.TenSP.Substring(0, 30)...</td>
+                    }
+                    else
+                    {
+                        <td>@item.data.Sp.TenSP</td>
+                    }
+                    <td>
+                        <img src="~/Images/SP/@item.data.Sp.HinhAnh" width="180px" /></td>
+                    @using (Html.BeginForm("CapNhatGioHang", "GioHang", new { @MaSP = item.data.Sp.Id }))
+                    {
+                        <td>
+                            <input type="number" min="1" name="txtSoLuong" value="@item.data.Sp.SoLuong" max="99" /></td>
+                        <td>
+                            <pre>@String.Format("{0:0,0} VND", item.data.Sp.Gia)</pre>
+                        </td>
+                        <td>
+                            <pre>@String.Format("{0:0,0} VND", item.data.Sp.Gia * @item.data.Sp.SoLuong)</pre>
+                        </td>
+                        <td><a href="@Url.Action("XemChiTiet", "SanPham", new { @maSP = item.data.Sp.Id })">Details</a></td>
+                        <td>@Html.ActionLink("Delete", "XoaGioHang", new { @MaSP = item.data.Sp.Id })</td>
+                        <td>
+                            <input type="submit" value="Update" class="btn btn-primary" /></td>
+                    }
+                </tr>
+            }
+        </tbody>
+        <tfoot class="table-success">
+            <tr>
+                <td colspan="3" style="color: blue; font-weight: bold; text-align: right;">Tổng cộng</td>
+                <td style="color: red; font-weight: bold;">@ViewBag.TongSoLuong</td>
+                <td></td>
+                <td colspan="3" style="color: red; font-weight: bold;">@String.Format("{0:0,0} VND", @ViewBag.TongThanhTien)</td>
+                <td class="text-center">
+                    <a href="~/GioHang/DatHang" style="text-decoration:none" title="Đặt hàng">
+                        <span style="color:#000; font-size: 1.4em">
+                            <i class="fas fa-money-bill-wave"></i><pre style="font-size: 1em">Đặt hàng</pre> 
+                        </span>
+                    </a>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+@if (@ViewBag.Info == "ERR")
+{
+    <script>
+        Toast.fire({
+            icon: 'warning',
+            title: '@ViewBag.Message'
+        });
+    </script>
+    @ViewBag.Clear()
+}

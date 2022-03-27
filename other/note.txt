@@ -1,0 +1,11 @@
+thông tin giao hàng
+    - hỏi xem có đăng nhập hay không
+    -- nếu không 
+    - Họ tên khách hàng
+    - Email
+    - số điện thoại
+    - Địa chỉ
+        Địa chỉ nhà
+        Tỉnh (Chọn trước)
+        Huyện (Chọn sau)
+        Xã (chọn cuối)

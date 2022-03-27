@@ -1,0 +1,156 @@
+D:\github\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\WebBanMyPham.dll
+D:\github\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\WebBanMyPham.pdb
+D:\github\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\Microsoft.Web.Infrastructure.dll
+D:\github\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\Newtonsoft.Json.dll
+D:\github\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\System.Net.Http.Formatting.dll
+D:\github\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\System.Web.Helpers.dll
+D:\github\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\System.Web.Http.dll
+D:\github\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\System.Web.Http.WebHost.dll
+D:\github\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\System.Web.Mvc.dll
+D:\github\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\System.Web.Razor.dll
+D:\github\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\System.Web.WebPages.Deployment.dll
+D:\github\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\System.Web.WebPages.dll
+D:\github\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\System.Web.WebPages.Razor.dll
+D:\github\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\Newtonsoft.Json.xml
+D:\github\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\System.Net.Http.Formatting.xml
+D:\github\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\System.Web.Helpers.xml
+D:\github\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\System.Web.Http.xml
+D:\github\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\System.Web.Http.WebHost.xml
+D:\github\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\System.Web.Mvc.xml
+D:\github\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\System.Web.Razor.xml
+D:\github\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\System.Web.WebPages.xml
+D:\github\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\System.Web.WebPages.Deployment.xml
+D:\github\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\System.Web.WebPages.Razor.xml
+D:\github\webBanMyPham\WebBanMyPham\WebBanMyPham\obj\Debug\WebBanMyPham.dll
+D:\github\webBanMyPham\WebBanMyPham\WebBanMyPham\obj\Debug\WebBanMyPham.pdb
+D:\github\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\PagedList.dll
+D:\github\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\PagedList.Mvc.dll
+D:\github\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\PagedList.xml
+D:\github\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\PagedList.Mvc.xml
+D:\github\webBanMyPham\WebBanMyPham\WebBanMyPham\obj\Debug\WebBanMyPham.csprojResolveAssemblyReference.cache
+D:\Đồ án CN WEB\WebBanMyPham\WebBanMyPham\bin\WebBanMyPham.dll
+D:\Đồ án CN WEB\WebBanMyPham\WebBanMyPham\bin\WebBanMyPham.pdb
+D:\Đồ án CN WEB\WebBanMyPham\WebBanMyPham\bin\Microsoft.Web.Infrastructure.dll
+D:\Đồ án CN WEB\WebBanMyPham\WebBanMyPham\bin\Newtonsoft.Json.dll
+D:\Đồ án CN WEB\WebBanMyPham\WebBanMyPham\bin\PagedList.dll
+D:\Đồ án CN WEB\WebBanMyPham\WebBanMyPham\bin\PagedList.Mvc.dll
+D:\Đồ án CN WEB\WebBanMyPham\WebBanMyPham\bin\System.Net.Http.Formatting.dll
+D:\Đồ án CN WEB\WebBanMyPham\WebBanMyPham\bin\System.Web.Helpers.dll
+D:\Đồ án CN WEB\WebBanMyPham\WebBanMyPham\bin\System.Web.Http.dll
+D:\Đồ án CN WEB\WebBanMyPham\WebBanMyPham\bin\System.Web.Http.WebHost.dll
+D:\Đồ án CN WEB\WebBanMyPham\WebBanMyPham\bin\System.Web.Mvc.dll
+D:\Đồ án CN WEB\WebBanMyPham\WebBanMyPham\bin\System.Web.Razor.dll
+D:\Đồ án CN WEB\WebBanMyPham\WebBanMyPham\bin\System.Web.WebPages.Deployment.dll
+D:\Đồ án CN WEB\WebBanMyPham\WebBanMyPham\bin\System.Web.WebPages.dll
+D:\Đồ án CN WEB\WebBanMyPham\WebBanMyPham\bin\System.Web.WebPages.Razor.dll
+D:\Đồ án CN WEB\WebBanMyPham\WebBanMyPham\bin\PagedList.xml
+D:\Đồ án CN WEB\WebBanMyPham\WebBanMyPham\bin\PagedList.Mvc.xml
+D:\Đồ án CN WEB\WebBanMyPham\WebBanMyPham\bin\Newtonsoft.Json.xml
+D:\Đồ án CN WEB\WebBanMyPham\WebBanMyPham\bin\System.Net.Http.Formatting.xml
+D:\Đồ án CN WEB\WebBanMyPham\WebBanMyPham\bin\System.Web.Helpers.xml
+D:\Đồ án CN WEB\WebBanMyPham\WebBanMyPham\bin\System.Web.Http.xml
+D:\Đồ án CN WEB\WebBanMyPham\WebBanMyPham\bin\System.Web.Http.WebHost.xml
+D:\Đồ án CN WEB\WebBanMyPham\WebBanMyPham\bin\System.Web.Mvc.xml
+D:\Đồ án CN WEB\WebBanMyPham\WebBanMyPham\bin\System.Web.Razor.xml
+D:\Đồ án CN WEB\WebBanMyPham\WebBanMyPham\bin\System.Web.WebPages.xml
+D:\Đồ án CN WEB\WebBanMyPham\WebBanMyPham\bin\System.Web.WebPages.Deployment.xml
+D:\Đồ án CN WEB\WebBanMyPham\WebBanMyPham\bin\System.Web.WebPages.Razor.xml
+D:\Đồ án CN WEB\WebBanMyPham\WebBanMyPham\obj\Debug\WebBanMyPham.csprojResolveAssemblyReference.cache
+D:\Đồ án CN WEB\WebBanMyPham\WebBanMyPham\obj\Debug\WebBanMyPham.dll
+D:\Đồ án CN WEB\WebBanMyPham\WebBanMyPham\obj\Debug\WebBanMyPham.pdb
+C:\Users\Admin\Desktop\WebBanMyPham\WebBanMyPham\bin\WebBanMyPham.dll
+C:\Users\Admin\Desktop\WebBanMyPham\WebBanMyPham\bin\WebBanMyPham.pdb
+C:\Users\Admin\Desktop\WebBanMyPham\WebBanMyPham\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Admin\Desktop\WebBanMyPham\WebBanMyPham\bin\Newtonsoft.Json.dll
+C:\Users\Admin\Desktop\WebBanMyPham\WebBanMyPham\bin\PagedList.dll
+C:\Users\Admin\Desktop\WebBanMyPham\WebBanMyPham\bin\PagedList.Mvc.dll
+C:\Users\Admin\Desktop\WebBanMyPham\WebBanMyPham\bin\System.Net.Http.Formatting.dll
+C:\Users\Admin\Desktop\WebBanMyPham\WebBanMyPham\bin\System.Web.Helpers.dll
+C:\Users\Admin\Desktop\WebBanMyPham\WebBanMyPham\bin\System.Web.Http.dll
+C:\Users\Admin\Desktop\WebBanMyPham\WebBanMyPham\bin\System.Web.Http.WebHost.dll
+C:\Users\Admin\Desktop\WebBanMyPham\WebBanMyPham\bin\System.Web.Mvc.dll
+C:\Users\Admin\Desktop\WebBanMyPham\WebBanMyPham\bin\System.Web.Razor.dll
+C:\Users\Admin\Desktop\WebBanMyPham\WebBanMyPham\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Admin\Desktop\WebBanMyPham\WebBanMyPham\bin\System.Web.WebPages.dll
+C:\Users\Admin\Desktop\WebBanMyPham\WebBanMyPham\bin\System.Web.WebPages.Razor.dll
+C:\Users\Admin\Desktop\WebBanMyPham\WebBanMyPham\bin\PagedList.xml
+C:\Users\Admin\Desktop\WebBanMyPham\WebBanMyPham\bin\PagedList.Mvc.xml
+C:\Users\Admin\Desktop\WebBanMyPham\WebBanMyPham\bin\Newtonsoft.Json.xml
+C:\Users\Admin\Desktop\WebBanMyPham\WebBanMyPham\bin\System.Net.Http.Formatting.xml
+C:\Users\Admin\Desktop\WebBanMyPham\WebBanMyPham\bin\System.Web.Helpers.xml
+C:\Users\Admin\Desktop\WebBanMyPham\WebBanMyPham\bin\System.Web.Http.xml
+C:\Users\Admin\Desktop\WebBanMyPham\WebBanMyPham\bin\System.Web.Http.WebHost.xml
+C:\Users\Admin\Desktop\WebBanMyPham\WebBanMyPham\bin\System.Web.Mvc.xml
+C:\Users\Admin\Desktop\WebBanMyPham\WebBanMyPham\bin\System.Web.Razor.xml
+C:\Users\Admin\Desktop\WebBanMyPham\WebBanMyPham\bin\System.Web.WebPages.xml
+C:\Users\Admin\Desktop\WebBanMyPham\WebBanMyPham\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Admin\Desktop\WebBanMyPham\WebBanMyPham\bin\System.Web.WebPages.Razor.xml
+C:\Users\Admin\Desktop\WebBanMyPham\WebBanMyPham\obj\Debug\WebBanMyPham.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\WebBanMyPham\WebBanMyPham\obj\Debug\WebBanMyPham.dll
+C:\Users\Admin\Desktop\WebBanMyPham\WebBanMyPham\obj\Debug\WebBanMyPham.pdb
+C:\Users\Dell\OneDrive\Desktop\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\WebBanMyPham.dll.config
+C:\Users\Dell\OneDrive\Desktop\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\WebBanMyPham.dll
+C:\Users\Dell\OneDrive\Desktop\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\WebBanMyPham.pdb
+C:\Users\Dell\OneDrive\Desktop\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Dell\OneDrive\Desktop\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\Newtonsoft.Json.dll
+C:\Users\Dell\OneDrive\Desktop\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\PagedList.dll
+C:\Users\Dell\OneDrive\Desktop\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\PagedList.Mvc.dll
+C:\Users\Dell\OneDrive\Desktop\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\System.Net.Http.Formatting.dll
+C:\Users\Dell\OneDrive\Desktop\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\System.Web.Helpers.dll
+C:\Users\Dell\OneDrive\Desktop\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\System.Web.Http.dll
+C:\Users\Dell\OneDrive\Desktop\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\System.Web.Http.WebHost.dll
+C:\Users\Dell\OneDrive\Desktop\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\System.Web.Mvc.dll
+C:\Users\Dell\OneDrive\Desktop\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\System.Web.Razor.dll
+C:\Users\Dell\OneDrive\Desktop\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Dell\OneDrive\Desktop\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\System.Web.WebPages.dll
+C:\Users\Dell\OneDrive\Desktop\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\System.Web.WebPages.Razor.dll
+C:\Users\Dell\OneDrive\Desktop\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\PagedList.xml
+C:\Users\Dell\OneDrive\Desktop\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\PagedList.Mvc.xml
+C:\Users\Dell\OneDrive\Desktop\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\Newtonsoft.Json.xml
+C:\Users\Dell\OneDrive\Desktop\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\System.Net.Http.Formatting.xml
+C:\Users\Dell\OneDrive\Desktop\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\System.Web.Helpers.xml
+C:\Users\Dell\OneDrive\Desktop\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\System.Web.Http.xml
+C:\Users\Dell\OneDrive\Desktop\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\System.Web.Http.WebHost.xml
+C:\Users\Dell\OneDrive\Desktop\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\System.Web.Mvc.xml
+C:\Users\Dell\OneDrive\Desktop\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\System.Web.Razor.xml
+C:\Users\Dell\OneDrive\Desktop\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\System.Web.WebPages.xml
+C:\Users\Dell\OneDrive\Desktop\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Dell\OneDrive\Desktop\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\System.Web.WebPages.Razor.xml
+C:\Users\Dell\OneDrive\Desktop\webBanMyPham\WebBanMyPham\WebBanMyPham\obj\Debug\WebBanMyPham.csprojAssemblyReference.cache
+C:\Users\Dell\OneDrive\Desktop\webBanMyPham\WebBanMyPham\WebBanMyPham\obj\Debug\WebBanMyPham.csproj.CoreCompileInputs.cache
+C:\Users\Dell\OneDrive\Desktop\webBanMyPham\WebBanMyPham\WebBanMyPham\obj\Debug\WebBanMyPham.csproj.CopyComplete
+C:\Users\Dell\OneDrive\Desktop\webBanMyPham\WebBanMyPham\WebBanMyPham\obj\Debug\WebBanMyPham.dll
+C:\Users\Dell\OneDrive\Desktop\webBanMyPham\WebBanMyPham\WebBanMyPham\obj\Debug\WebBanMyPham.pdb
+E:\Kiem Dinh Phan Mem\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\WebBanMyPham.dll.config
+E:\Kiem Dinh Phan Mem\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\WebBanMyPham.dll
+E:\Kiem Dinh Phan Mem\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\WebBanMyPham.pdb
+E:\Kiem Dinh Phan Mem\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\Microsoft.Web.Infrastructure.dll
+E:\Kiem Dinh Phan Mem\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\Newtonsoft.Json.dll
+E:\Kiem Dinh Phan Mem\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\PagedList.dll
+E:\Kiem Dinh Phan Mem\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\PagedList.Mvc.dll
+E:\Kiem Dinh Phan Mem\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\System.Net.Http.Formatting.dll
+E:\Kiem Dinh Phan Mem\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\System.Web.Helpers.dll
+E:\Kiem Dinh Phan Mem\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\System.Web.Http.dll
+E:\Kiem Dinh Phan Mem\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\System.Web.Http.WebHost.dll
+E:\Kiem Dinh Phan Mem\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\System.Web.Mvc.dll
+E:\Kiem Dinh Phan Mem\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\System.Web.Razor.dll
+E:\Kiem Dinh Phan Mem\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\System.Web.WebPages.Deployment.dll
+E:\Kiem Dinh Phan Mem\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\System.Web.WebPages.dll
+E:\Kiem Dinh Phan Mem\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\System.Web.WebPages.Razor.dll
+E:\Kiem Dinh Phan Mem\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\PagedList.xml
+E:\Kiem Dinh Phan Mem\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\PagedList.Mvc.xml
+E:\Kiem Dinh Phan Mem\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\Newtonsoft.Json.xml
+E:\Kiem Dinh Phan Mem\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\System.Net.Http.Formatting.xml
+E:\Kiem Dinh Phan Mem\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\System.Web.Helpers.xml
+E:\Kiem Dinh Phan Mem\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\System.Web.Http.xml
+E:\Kiem Dinh Phan Mem\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\System.Web.Http.WebHost.xml
+E:\Kiem Dinh Phan Mem\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\System.Web.Mvc.xml
+E:\Kiem Dinh Phan Mem\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\System.Web.Razor.xml
+E:\Kiem Dinh Phan Mem\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\System.Web.WebPages.xml
+E:\Kiem Dinh Phan Mem\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\System.Web.WebPages.Deployment.xml
+E:\Kiem Dinh Phan Mem\webBanMyPham\WebBanMyPham\WebBanMyPham\bin\System.Web.WebPages.Razor.xml
+E:\Kiem Dinh Phan Mem\webBanMyPham\WebBanMyPham\WebBanMyPham\obj\Debug\WebBanMyPham.csprojAssemblyReference.cache
+E:\Kiem Dinh Phan Mem\webBanMyPham\WebBanMyPham\WebBanMyPham\obj\Debug\WebBanMyPham.csproj.CoreCompileInputs.cache
+E:\Kiem Dinh Phan Mem\webBanMyPham\WebBanMyPham\WebBanMyPham\obj\Debug\WebBanMyPham.csproj.CopyComplete
+E:\Kiem Dinh Phan Mem\webBanMyPham\WebBanMyPham\WebBanMyPham\obj\Debug\WebBanMyPham.dll
+E:\Kiem Dinh Phan Mem\webBanMyPham\WebBanMyPham\WebBanMyPham\obj\Debug\WebBanMyPham.pdb

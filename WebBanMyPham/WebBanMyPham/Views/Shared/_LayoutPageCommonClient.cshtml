@@ -1,0 +1,309 @@
+﻿<!DOCTYPE html>
+
+<html class="h-100">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>@ViewBag.Title</title>
+
+    <link rel="icon" href="~/Images/Logo/3TS LOGO.png">
+
+    <link href="~/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/lib/fontawesome/css/all.min.css" rel="stylesheet" />
+
+    <script src="~/lib/jquery/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="~/lib/asset/script/validate.js"></script>
+    <script defer src="~/lib/asset/script/SignIn.js"></script>
+
+    <script type="text/javascript" src="~/lib/sweetalert/sweetalert2@11.js"></script>
+
+    <script type="text/javascript">
+        var Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+        });
+    </script>
+</head>
+<body class="d-flex flex-column h-100">
+
+    @*menu*@
+    <div class="container-fluid mauChuDao">
+        <header class="container">
+            <nav class="navbar navbar-expand-lg navbar-light mauChuDao">
+                <div class="container-fluid">
+                    @*logo*@
+                    <a class="navbar-brand" href="~/Home/Index">
+                        <img src="~/Images/Logo/3TS LOGO.png" class="rounded-3" alt="logo" width="80" height="80">
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarScroll">
+                        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                            <li class="nav-item">
+                                <a href="~/Home/Index" class="nav-link text-white txtMenuHeader me-2" style="font-size: 24px">TRANG CHỦ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="~/Home/LienHe" class="nav-link text-white txtMenuHeader me-2" style="font-size: 24px">LIÊN HỆ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/Auth/DangNhap" class="nav-link text-white txtMenuHeader me-2" style="font-size: 24px">ĐĂNG NHẬP</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#DangKy" data-bs-toggle="modal" data-bs-target="#modalSignup" class="nav-link text-white txtMenuHeader me-2" style="font-size: 24px">ĐĂNG KÝ</a>
+                            </li>
+
+                            <li class="nav-item">
+                                @Html.Action("GioHangPartial", "GioHang")
+                            </li>
+                        </ul>
+
+                        <form class="d-flex me-auto" action="~/SanPham/TimKiemSanPham" method="get">
+                            <input class="form-control me-1" name="tenSP" type="search" placeholder="Search" aria-label="Search" style="width: 320px">
+                            <button class="btn btn-light text-center" type="submit" style="height: 40px; width: 40px;">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    </div>
+
+    @*nội dung*@
+    <div class="container mt-2 mb-3">
+        <div class="row">
+            <div class="col col-lg-4 col-md-3 h-100 sticky">
+                @Html.Action("FrameDanhMuc", "DanhMuc")
+            </div>
+
+            <div class="col col-lg-8 col-md-9">
+                <div class="row">
+                    <div class="col">
+                        <div id="carouselExampleIndicators" class="carousel slide w-100 mx-auto" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="/Images/banner/banner3.jpg" class="d-block w-100" alt="..." height="400">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="/Images/banner/banner2.jpg" class="d-block w-100" alt="..." height="400">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="/Images/banner/banner1.png" class="d-block w-100" alt="..." height="400">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                @*nội dung chính*@
+                <div>
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @*footer*@
+    <div class="text-center fw-bold lh-base footer mt-auto mauChuDao">
+        <div class="container">
+            <div class="row mt-2">
+                <div class="col-2 me-2">
+                    <a class="navbar-brand" href="~/Home/Index">
+                        <img src="~/Images/Logo/3TS LOGO.png" class="rounded-3" alt="logo" width="80" height="80">
+                    </a>
+                </div>
+                <div class="col-3">
+                    <h5 class="text-white fw-bold">3TS COSMETICS</h5>
+                    <h6 class="text-white m-auto" style="color: white; font-size: 18px">&copy 2021 3TS All Rights Reserved
+                    </h6>
+
+                </div>
+
+                <div class="col-3 me-2">
+                    <h5 class="text-white fw-bold">VỀ CHÚNG TÔI</h5>
+                    <a href="~/Home/LienHe" class="nav-link text-white ">Liên hệ</a>
+                </div>
+
+                <div class="col-3" style="font-size: 20px">
+                    <h5 class="text-white fw-bold">THÀNH VIÊN 3TS</h5>
+                    <ul class="nav flex-column" style="font-size: 18px; font-family: Arial">
+                        <li class="nav-item">
+                            <a href="/Auth/DangNhap" class="nav-link text-white ">Đăng nhập</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#DangKy" data-bs-toggle="modal" data-bs-target="#modalSignup" class="nav-link text-white">Đăng ký</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        .mauChuDao {
+            cursor: default;
+            background-color: lightsteelblue !important;
+        }
+
+        .txtMenuHeader:hover {
+            color: #dfdfdf !important;
+        }
+
+        .sticky {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 5px;
+        }
+
+        .pagination-container {
+            position: relative;
+            height: 46px;
+            margin-top: 5px;
+        }
+
+            .pagination-container a {
+                text-decoration: none;
+            }
+
+            .pagination-container li:hover {
+                background: rgba(13, 110, 253, .5);
+            }
+
+
+        .btn-toggle {
+            display: inline-flex;
+            align-items: center;
+            padding: .25rem .5rem;
+            font-weight: 600;
+            color: rgba(0, 0, 0, .65);
+            background-color: transparent;
+            border: 0;
+        }
+
+            .btn-toggle:hover,
+            .btn-toggle:focus {
+                color: rgba(0, 0, 0, .85);
+                background-color: aliceblue;
+            }
+
+            .btn-toggle::before {
+                width: 1.25em;
+                line-height: 0;
+                content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba%280,0,0,.5%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
+                transition: transform .35s ease;
+                transform-origin: .5em 50%;
+            }
+
+            .btn-toggle[aria-expanded="true"] {
+                color: rgba(0, 0, 0, .85);
+            }
+
+                .btn-toggle[aria-expanded="true"]::before {
+                    transform: rotate(90deg);
+                }
+
+        .btn-toggle-nav a {
+            display: inline-flex;
+            padding: .1875rem .5rem;
+            margin-top: .125rem;
+            margin-left: 1.25rem;
+            text-decoration: none;
+        }
+
+            .btn-toggle-nav a:hover,
+            .btn-toggle-nav a:focus {
+                background-color: aliceblue;
+            }
+    </style>
+    <script>
+        (function () {
+            'use strict'
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+            tooltipTriggerList.forEach(function (tooltipTriggerEl) {
+                new bootstrap.Tooltip(tooltipTriggerEl)
+            })
+        })()
+    </script>
+    <div class="modal fade" id="modalSignup" tabindex="-1" aria-labelledby="modalSignup" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title fw-bold">Đăng ký</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" title="Close" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-2 form-floating">
+                        <input type="text" class="form-control" id="floatingNameSignup" name="hoTen" placeholder="Họ và tên">
+                        <label for="floatingNameSignup">Họ và tên</label>
+                    </div>
+                    <div class="mb-2 form-floating">
+                        <input type="text" class="form-control" id="floatingUsernameSignup" name="username" placeholder="Tài khoản">
+                        <label for="floatingUsernameSignup">Tài khoản</label>
+                    </div>
+                    <div class="mb-2 form-floating">
+                        <input type="password" class="form-control" id="floatingPasswordSignup" name="pw" placeholder="Mật khẩu">
+                        <label for="floatingPasswordSignup">Mật khẩu</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" value="Nam" name="GioiTinh" id="gtNam" checked>
+                        <label class="form-check-label" for="gtNam">
+                            Nam
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" value="Nữ" name="GioiTinh" id="gtNu">
+                        <label class="form-check-label" for="gtNu">
+                            Nữ
+                        </label>
+                    </div>
+
+                    <div class="mb-2 form-floating">
+                        <input type="email" class="form-control" id="floatingEmailSignup" name="email" placeholder="Email">
+                        <label for="floatingEmailSignup">Email</label>
+                    </div>
+                    <div class="mb-2 form-floating">
+                        <input type="date" class="form-control" id="floatingNgSinhSignup" name="ngaySinh" placeholder="Ngày sinh">
+                        <label for="floatingNgSinhSignup">Ngày sinh</label>
+                    </div>
+                    <div class="mb-2 form-floating">
+                        <input type="tel" class="form-control" id="floatingPhoneSignup" name="sdt" placeholder="Số điện thoại">
+                        <label for="floatingPhoneSignup">Số điện thoại</label>
+                    </div>
+                    <hr />
+                    <button class="w-100 btn btn-lg btn-primary" id="btnSignupInfo" title="Sign up" type="submit">Đăng ký</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var modalSignup = new bootstrap.Modal(document.getElementById('modalSignup'))
+    </script>
+</body>
+</html>

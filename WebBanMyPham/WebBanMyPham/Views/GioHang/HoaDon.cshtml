@@ -1,0 +1,63 @@
+﻿@model List<WebBanMyPham.Models.HoaDon>
+
+@{
+    ViewBag.Title = "Hóa đơn - 3TS Shop";
+    Layout = "~/Views/Shared/_LayoutPageCommonClient.cshtml";
+}
+
+<h2 class="text-center fw-bold mt-3 mauChuDao">Hóa đơn</h2>
+<h2 class="fw-bold">Họ tên: @Model[0].TenKH</h2>
+<div class="table-responsive">
+    <table class="table">
+        <thead class="table-success">
+            <tr>
+                <th>#</th>
+                <th>Sản phẩm</th>
+                <th>Hình ảnh</th>
+                <th>Số lượng</th>
+                <th>Giá</th>
+                <th>Thành tiền</th>
+                <th></th>
+            </tr>
+
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Select((data, i) => new { data, i }))
+            {
+                <tr>
+                    <td>@(item.i + 1)</td>
+
+                    @if (item.data.Sp.TenSP.Length > 30)
+                    {
+                        <td>@item.data.Sp.TenSP.Substring(0, 30)...</td>
+                    }
+                    else
+                    {
+                        <td>@item.data.Sp.TenSP</td>
+                    }
+                    <td>
+                        <img src="~/Images/SP/@item.data.Sp.HinhAnh" width="180px" /></td>
+                    <td>@item.data.Sp.SoLuong</td>
+                    <td>
+                        <pre>@String.Format("{0:0,0} VND", item.data.Sp.Gia)</pre>
+                    </td>
+                    <td>
+                        <pre>@String.Format("{0:0,0} VND", item.data.Sp.Gia * @item.data.Sp.SoLuong)</pre>
+                    </td>
+                    <td></td>
+                </tr>
+            }
+        </tbody>
+        <tfoot class="table-success">
+            <tr>
+                <td colspan="3" style="color: blue; font-weight: bold; text-align: right;">Tổng cộng</td>
+                <td style="color: red; font-weight: bold;">@ViewBag.TongSoLuong</td>
+                <td></td>
+                <td colspan="2" style="color: red; font-weight: bold;">@String.Format("{0:0,0} VND", @ViewBag.TongThanhTien)</td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+<a href="~/Home/Index" class="btn text-white" style="background-color: steelblue; float: right">Xác Nhận</a>
+
+@{Session["HoaDon"]=null;}

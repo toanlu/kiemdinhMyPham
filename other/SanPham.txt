@@ -1,0 +1,42 @@
+Có 4 danh mục sản phẩm
+- Chăm sóc da:
++ Tẩy trang
++ Sữa rửa mặt
++ Tẩy tế bào chết
++ Toner/Lotion(Nước hoa hồng)
++ Serum/ Essence
++ Kem dưỡng
++ Dưỡng mắt
++ Son dưỡng 
++ Xịt khoáng
++ Mặt nạ
++ Chống nắng
+
+- Chăm sóc cơ thể:
++ Sữa tắm
++ Tẩy tế bào chết 
++ Lotion
++ Kem dưỡng da tay
++ Sản phẩm khử mùi
++ Nước hoa
+
+- Chăm sóc tóc:
++ Dầu gội
++ Dầu xả
++ Kem ủ tóc
++ Đặc trị tóc
++ Nhuộm tóc
+
+- Trang điểm:
++ Kem lót
++ Kem nền/Cushion
++ Che khuyết điểm
++ Phấn phủ
++ Tạo khối/Highlight
++ Kẻ chân mày
++ Phấn mắt 
++ Kẻ mắt
++ Mascara
++ Má hồng
++ Son thỏi
++ Son kem

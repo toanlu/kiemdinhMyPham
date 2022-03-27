@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="WEBBANMP" Class="DatabaseDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=MSI-PC;Initial Catalog=WEBBANMP;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="WEBBANMPConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.CHITIETDANHMUC" Member="CHITIETDANHMUCs">
+    <Type Name="CHITIETDANHMUC">
+      <Column Name="ID_DANHMUC" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ID_LOAISP" Type="System.String" DbType="VarChar(6) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="DANHMUC_CHITIETDANHMUC" Member="DANHMUC" ThisKey="ID_DANHMUC" OtherKey="ID" Type="DANHMUC" IsForeignKey="true" />
+      <Association Name="LOAISP_CHITIETDANHMUC" Member="LOAISP" ThisKey="ID_LOAISP" OtherKey="ID" Type="LOAISP" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.THONGTINTAIKHOAN" Member="THONGTINTAIKHOANs">
+    <Type Name="THONGTINTAIKHOAN">
+      <Column Name="ID" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="HOTEN" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NGSINH" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="GTINH" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="NGTAO" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="EMAIL" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SDT" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="DCHI" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ID_TAIKHOAN" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Association Name="TAIKHOAN_THONGTINTAIKHOAN" Member="TAIKHOAN" ThisKey="ID_TAIKHOAN" OtherKey="ID" Type="TAIKHOAN" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CHITIETHD" Member="CHITIETHDs">
+    <Type Name="CHITIETHD">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_HD" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ID_SP" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="SOLUONG" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="SANPHAM_CHITIETHD" Member="SANPHAM" ThisKey="ID_SP" OtherKey="ID" Type="SANPHAM" IsForeignKey="true" />
+      <Association Name="HOADON_CHITIETHD" Member="HOADON" ThisKey="ID_HD" OtherKey="ID" Type="HOADON" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CHITIETPN" Member="CHITIETPNs">
+    <Type Name="CHITIETPN">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_PN" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ID_SP" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="SOLUONG" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="PHIEUNHAP_CHITIETPN" Member="PHIEUNHAP" ThisKey="ID_PN" OtherKey="ID" Type="PHIEUNHAP" IsForeignKey="true" />
+      <Association Name="SANPHAM_CHITIETPN" Member="SANPHAM" ThisKey="ID_SP" OtherKey="ID" Type="SANPHAM" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DANHMUC" Member="DANHMUCs">
+    <Type Name="DANHMUC">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TENDANHMUC" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="DANHMUC_CHITIETDANHMUC" Member="CHITIETDANHMUCs" ThisKey="ID" OtherKey="ID_DANHMUC" Type="CHITIETDANHMUC" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DONGIA" Member="DONGIAs">
+    <Type Name="DONGIA">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_SP" Type="System.String" DbType="VarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="GIA" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="NGCAPNHAT" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="SANPHAM_DONGIA" Member="SANPHAM" ThisKey="ID_SP" OtherKey="ID" Type="SANPHAM" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GRTK" Member="GRTKs">
+    <Type Name="GRTK">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TEN" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CODEGR" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Association Name="GRTK_TAIKHOAN" Member="TAIKHOANs" ThisKey="ID" OtherKey="ID_GR" Type="TAIKHOAN" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KHACHHANG" Member="KHACHHANGs">
+    <Type Name="KHACHHANG">
+      <Column Name="ID" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ID_TK" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="DIEMTICHLUY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="KHACHHANG_PHIEUNHAP" Member="PHIEUNHAPs" ThisKey="ID" OtherKey="ID_KH" Type="PHIEUNHAP" />
+      <Association Name="KHACHHANG_HOADON" Member="HOADONs" ThisKey="ID" OtherKey="ID_KH" Type="HOADON" />
+      <Association Name="TAIKHOAN_KHACHHANG" Member="TAIKHOAN" ThisKey="ID_TK" OtherKey="ID" Type="TAIKHOAN" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LOAISP" Member="LOAISPs">
+    <Type Name="LOAISP">
+      <Column Name="ID" Type="System.String" DbType="VarChar(6) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TENLOAI" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="LOAISP_CHITIETDANHMUC" Member="CHITIETDANHMUCs" ThisKey="ID" OtherKey="ID_LOAISP" Type="CHITIETDANHMUC" />
+      <Association Name="LOAISP_SANPHAM" Member="SANPHAMs" ThisKey="ID" OtherKey="ID_LOAI" Type="SANPHAM" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NHANVIEN" Member="NHANVIENs">
+    <Type Name="NHANVIEN">
+      <Column Name="ID" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ID_TK" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Association Name="TAIKHOAN_NHANVIEN" Member="TAIKHOAN" ThisKey="ID_TK" OtherKey="ID" Type="TAIKHOAN" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PHIEUNHAP" Member="PHIEUNHAPs">
+    <Type Name="PHIEUNHAP">
+      <Column Name="ID" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NGTAO" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="DONGIA" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ID_KH" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Association Name="PHIEUNHAP_CHITIETPN" Member="CHITIETPNs" ThisKey="ID" OtherKey="ID_PN" Type="CHITIETPN" />
+      <Association Name="KHACHHANG_PHIEUNHAP" Member="KHACHHANG" ThisKey="ID_KH" OtherKey="ID" Type="KHACHHANG" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SALE" Member="SALEs">
+    <Type Name="SALE">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GIATRI" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ID_SP" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="NGCAPNHAT" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="SANPHAM_SALE" Member="SANPHAM" ThisKey="ID_SP" OtherKey="ID" Type="SANPHAM" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SANPHAM" Member="SANPHAMs">
+    <Type Name="SANPHAM">
+      <Column Name="ID" Type="System.String" DbType="VarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TENSP" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MOTA" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SOLUONG" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NSX" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="HINHANH" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ID_LOAI" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Association Name="SANPHAM_CHITIETHD" Member="CHITIETHDs" ThisKey="ID" OtherKey="ID_SP" Type="CHITIETHD" />
+      <Association Name="SANPHAM_CHITIETPN" Member="CHITIETPNs" ThisKey="ID" OtherKey="ID_SP" Type="CHITIETPN" />
+      <Association Name="SANPHAM_DONGIA" Member="DONGIAs" ThisKey="ID" OtherKey="ID_SP" Type="DONGIA" />
+      <Association Name="SANPHAM_SALE" Member="SALEs" ThisKey="ID" OtherKey="ID_SP" Type="SALE" />
+      <Association Name="LOAISP_SANPHAM" Member="LOAISP" ThisKey="ID_LOAI" OtherKey="ID" Type="LOAISP" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TAIKHOAN" Member="TAIKHOANs">
+    <Type Name="TAIKHOAN">
+      <Column Name="ID" Type="System.String" DbType="VarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="USERNAME" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PW" Type="System.Data.Linq.Binary" DbType="VarBinary(50)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ID_GR" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="TAIKHOAN_THONGTINTAIKHOAN" Member="THONGTINTAIKHOANs" ThisKey="ID" OtherKey="ID_TAIKHOAN" Type="THONGTINTAIKHOAN" />
+      <Association Name="TAIKHOAN_KHACHHANG" Member="KHACHHANGs" ThisKey="ID" OtherKey="ID_TK" Type="KHACHHANG" />
+      <Association Name="TAIKHOAN_NHANVIEN" Member="NHANVIENs" ThisKey="ID" OtherKey="ID_TK" Type="NHANVIEN" />
+      <Association Name="GRTK_TAIKHOAN" Member="GRTK" ThisKey="ID_GR" OtherKey="ID" Type="GRTK" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HOADON" Member="HOADONs">
+    <Type Name="HOADON">
+      <Column Name="ID" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NGTAO" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="DONGIA" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ID_KH" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Association Name="HOADON_CHITIETHD" Member="CHITIETHDs" ThisKey="ID" OtherKey="ID_HD" Type="CHITIETHD" />
+      <Association Name="KHACHHANG_HOADON" Member="KHACHHANG" ThisKey="ID_KH" OtherKey="ID" Type="KHACHHANG" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.sp_UpTTTK" Method="sp_UpTTTK">
+    <Parameter Name="maTK" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="hoTen" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ngSinh" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="gioiTinh" Type="System.String" DbType="NVarChar(5)" />
+    <Parameter Name="email" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="sdt" Type="System.String" DbType="VarChar(11)" />
+    <Parameter Name="dChi" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="sp_UpTTTKResult">
+      <Column Name="Message" Type="System.String" DbType="NVarChar(7) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_AddDMUC" Method="sp_AddDMUC">
+    <Parameter Name="tenDanhMuc" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="sp_AddDMUCResult">
+      <Column Name="ErrorNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ErrorSeverity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ErrorState" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ErrorProcedure" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="ErrorLine" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Message" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_AddLSP" Method="sp_AddLSP">
+    <Parameter Name="tenLSP" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="tenDanhMuc" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="sp_AddLSPResult">
+      <Column Name="ErrorNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ErrorSeverity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ErrorState" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ErrorProcedure" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="ErrorLine" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Message" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_AddSP" Method="sp_AddSP">
+    <Parameter Name="tenSP" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="moTa" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="soLuong" Type="System.Int32" DbType="Int" />
+    <Parameter Name="gia" Type="System.Double" DbType="Float" />
+    <Parameter Name="nxs" Type="System.String" DbType="NVarChar(30)" />
+    <Parameter Name="urlImage" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="tenLSP" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="tenDM" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="sp_AddSPResult">
+      <Column Name="ErrorNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ErrorSeverity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ErrorState" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ErrorProcedure" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="ErrorLine" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Message" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_CKAcc" Method="sp_CKAcc">
+    <Parameter Name="userName" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="pw" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="GRNAME" Parameter="gRNAME" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="sp_CKAccResult">
+      <Column Name="Message" Type="System.String" DbType="NVarChar(7) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_CKUsername" Method="sp_CKUsername">
+    <Parameter Name="userName" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="GRNAME" Parameter="gRNAME" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="sp_CKUsernameResult">
+      <Column Name="Message" Type="System.String" DbType="NVarChar(2) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_GetErrorInfo" Method="sp_GetErrorInfo">
+    <ElementType Name="sp_GetErrorInfoResult">
+      <Column Name="ErrorNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ErrorSeverity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ErrorState" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ErrorProcedure" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="ErrorLine" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Message" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_getIDDMUC" Method="sp_getIDDMUC">
+    <Parameter Name="tenDMuc" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sp_getIDGR" Method="sp_getIDGR">
+    <Parameter Name="tenGr" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sp_GetMaHD" Method="sp_GetMaHD">
+    <Parameter Name="maHD" Type="System.String" DbType="VarChar(10)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sp_SetDG" Method="sp_SetDG">
+    <Parameter Name="tenSP" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="gia" Type="System.Double" DbType="Float" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.fn_autoIDHD" Method="fn_autoIDHD" IsComposable="true">
+    <Return Type="System.String" />
+  </Function>
+  <Function Name="dbo.fn_hash" Method="fn_hash" IsComposable="true">
+    <Parameter Name="text" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Data.Linq.Binary" />
+  </Function>
+  <Function Name="dbo.fn_autoIDKH" Method="fn_autoIDKH" IsComposable="true">
+    <Return Type="System.String" />
+  </Function>
+  <Function Name="dbo.fn_autoIDLSP" Method="fn_autoIDLSP" IsComposable="true">
+    <Return Type="System.String" />
+  </Function>
+  <Function Name="dbo.fn_autoIDNV" Method="fn_autoIDNV" IsComposable="true">
+    <Return Type="System.String" />
+  </Function>
+  <Function Name="dbo.fn_autoIDSP" Method="fn_autoIDSP" IsComposable="true">
+    <Return Type="System.String" />
+  </Function>
+  <Function Name="dbo.fn_autoIDTK" Method="fn_autoIDTK" IsComposable="true">
+    <Parameter Name="TENGR" Parameter="tENGR" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.String" />
+  </Function>
+  <Function Name="dbo.fn_autoIDTTND" Method="fn_autoIDTTND" IsComposable="true">
+    <Parameter Name="idLogin" Type="System.String" DbType="VarChar(15)" />
+    <Return Type="System.String" />
+  </Function>
+  <Function Name="dbo.fn_getCodeGr" Method="fn_getCodeGr" IsComposable="true">
+    <Parameter Name="tenGr" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.String" />
+  </Function>
+  <Function Name="dbo.fn_getRandom" Method="fn_getRandom" IsComposable="true">
+    <Parameter Name="min" Type="System.Int32" DbType="Int" />
+    <Parameter Name="max" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sp_AddAcc" Method="sp_AddAcc">
+    <Parameter Name="userName" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="pw" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="GRNAME" Parameter="gRNAME" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="hoTen" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ngSinh" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="gioiTinh" Type="System.String" DbType="NVarChar(5)" />
+    <Parameter Name="email" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="sdt" Type="System.String" DbType="VarChar(11)" />
+    <Parameter Name="dChi" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="sp_AddAccResult">
+      <Column Name="Message" Type="System.String" DbType="NVarChar(7) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_AddHD" Method="sp_AddHD">
+    <Parameter Name="maHD" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="tenKH" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="username" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="tenSP" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="soLuong" Type="System.Int32" DbType="Int" />
+    <ElementType Name="sp_AddHDResult">
+      <Column Name="ErrorNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ErrorSeverity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ErrorState" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ErrorProcedure" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="ErrorLine" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Message" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_ChangeAcc" Method="sp_ChangeAcc">
+    <Parameter Name="userName" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="pw" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="GRNAME" Parameter="gRNAME" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="sp_ChangeAccResult">
+      <Column Name="Message" Type="System.String" DbType="NVarChar(7) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>

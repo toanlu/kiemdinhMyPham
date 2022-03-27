@@ -1,0 +1,250 @@
+﻿
+@using WebBanMyPham.Models
+    @model ThongTinNguoiDung
+
+@{
+    ViewBag.Title = "TTGioHang";
+    Layout = "~/Views/Shared/_LayoutPageCommonClient.cshtml";
+}
+
+
+<style>
+    #container {
+        display: grid;
+        grid-template-columns: 500px 500px;
+        grid-template-rows: 650px 400px;
+    }
+    /* Nút Dropdown*/
+    .nut_dropdown1 {
+        background-color: white;
+        color: black;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+    }
+    /* Nút Dropdown*/
+    .nut_dropdown2 {
+        background-color: white;
+        color: black;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+    }
+
+    /* Nút Dropdown*/
+    .nut_dropdown3 {
+        background-color: white;
+        color: black;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+    }
+
+    /* Thiết lập vị trí cho thẻ div với class dropdown*/
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    /* Nội dung Dropdown */
+    .noidung_dropdown1 {
+        /*Ẩn nội dụng các đường dẫn*/
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+    /* Nội dung Dropdown */
+    .noidung_dropdown2 {
+        /*Ẩn nội dụng các đường dẫn*/
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    /* Nội dung Dropdown */
+    .noidung_dropdown3 {
+        /*Ẩn nội dụng các đường dẫn*/
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    /* Thiết kế style cho các đường dẫn tronng Dropdown */
+    .noidung_dropdown1 a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    /* Thiết kế style cho các đường dẫn tronng Dropdown */
+    .noidung_dropdown2 a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    /* Thiết kế style cho các đường dẫn tronng Dropdown */
+    .noidung_dropdown3 a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .hienThi {
+        display: block;
+    }
+</style>
+
+
+
+<div id="container">
+    <div class="item item1">
+        <br />
+        <table>
+            <tr>
+
+                <h2 style="text-align:left;color:black;font-weight:bold">Thông tin giao hàng</h2>
+                <label>Bạn đã có tài khoản ? <a href="#">Đăng nhập</a></label>
+                @using (Html.BeginForm("TTGioHang", "ThongTinGioHang", FormMethod.Post))
+                {
+                    @Html.ValidationSummary(true){
+                        <div class="form-group d-flex align-items-center">
+
+                            <div class="flex-column d-flex" style="width:500px">
+                                @Html.TextBoxFor(model => model.HoTen, new { autocomplete = "off", @placeholder = "Họ và tên" })
+                                @Html.ValidationMessageFor(model => model.HoTen, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <table>
+                            <tr>
+                                <td>
+                                    <div class="form-group d-flex align-items-center" style="width:300px">
+                                        <div class="flex-column d-flex" style="width:400px">
+                                            @Html.TextBoxFor(model => model.Email, new { autocomplete = "off", @placeholder = "Email" })
+                                            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-group d-flex align-items-center">
+                                        <div class="flex-column d-flex" style="width:198px ;margin-top:23px">
+                                            @Html.TextBoxFor(model => model.Sdt, new { autocomplete = "off", @placeholder = "Số điện thoại" })
+                                            @Html.ValidationMessageFor(model => model.Sdt, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="form-group d-flex align-items-center">
+
+                            <div class="flex-column d-flex" style="width:500px">
+                                @Html.TextBoxFor(model => model.diaChi, new { autocomplete = "off", @placeholder = "Nhập địa chỉ" })
+                                @Html.ValidationMessageFor(model => model.diaChi, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <table style="margin-top:20px; table-layout:fixed" width="118%" >
+                            <tr>
+                                <td >              
+                                    @Html.DropDownListFor(m => m.TinhTP, new SelectList(Enum.GetValues(typeof(tinh_ThanhPho))), "Tỉnh/Thành")
+                                    
+                                </td>
+
+                                <td  >
+                                    @Html.DropDownListFor(m => m.Huyen, new SelectList(Enum.GetValues(typeof(huyen_thanh))), " Quận/Huyện")
+
+                                </td>
+
+                                <td >
+                                    @Html.DropDownListFor(m => m.Phuong, new SelectList(Enum.GetValues(typeof(Phuong_Xa))), " Phường/Xã")
+                                </td>
+                            </tr>
+
+                        </table>
+
+                        <br />
+                        <div>
+                            <h5>Phương thức vận chuyển</h5>
+                        </div>
+
+                        <table style="border: solid 1px;  border-color:lightgrey" ; width="500px">
+                            <br />
+                            <tr>
+                                <td>
+
+                                    <input id="Checkbox1" type="checkbox" style="margin-left:10px" title="chon tick vao o" />
+                                    <label style="margin-top:10px">Giao hàng tiêu chuẩn</label>
+                                    <br />
+                                    <br />
+                                    <input id="Checkbox1" type="checkbox" style="margin-left:10px" title="chon tick vao o" required />
+                                    <label style="margin-bottom:10px">Giao hàng nhanh</label>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <br />
+                        <div>
+                            <h5>Phương thức thanh toán</h5>
+                        </div>
+                        <br />
+                        <table style="border:solid 1px ; border-color:lightgrey" ; width="500px">
+                            <tr>
+                                <td>
+                                    <input id="CbMomo" type="checkbox" style="margin-left:10px" />
+                                    <label style="margin-top:10px">Ví MoMo</label>
+                                    <br />
+                                    <br />
+                                    <input id="CbVNPay" type="checkbox" style="margin-left:10px" title="chon tick vao o" required />
+                                    <label>Thanh toán online qua cổng VNPay (ATM/Visa/MasterCard/JCB)</label>
+                                    <br />
+                                    <br />
+                                    <input id="CbMoca" type="checkbox" style="margin-left:10px" title="chon tick vao o" required />
+                                    <label>Thanh toán online qua ví GrabMoca</label>
+                                    <br />
+                                    <br />
+                                    <input id="CbShopeePay" type="checkbox" style="margin-left:10px" title="chon tick vao o" required />
+                                    <label> Thanh toán online qua ShopeePay</label>
+                                    <br />
+                                    <br />
+                                    <input id="CbCOD" type="checkbox" style="margin-left:10px" title="chon tick vao o" required />
+                                    <label>Thanh toán tiền mặt khi nhận hàng (COD)</label>
+                                    <br />
+                                    <br />
+                                    <input id="CbZaloPay" type="checkbox" style="margin-left:10px" title="chon tick vao o" required />
+                                    <label style="margin-bottom:10px">Thanh toán online qua ví ZaloPay</label>
+                                </td>
+                            </tr>
+                        </table>
+                        <br />
+
+                        <div class="text-center mt-4">
+                            <label style="width:123px"></label>
+                            <button class="btn btn-success" style="width:400px " id="btnSubmit">Hoàn Tất Đơn Hàng</button>
+                        </div>
+
+                    }
+
+                }
+            </tr>
+        </table>
+
+
+
+    </div>
+
+    <div class="item item2" style="background-color:aliceblue;height:825px;margin-left:20px"> </div>
+
+</div>
+
+

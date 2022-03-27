@@ -1,0 +1,12 @@
+Thông tin nguời dùng
+- Mã người dùng
+- Họ tên
+- Ngày sinh
+- Giới tính
+- Ngày tạo
+- Lương (Nhân viên)
+- Ngày vào làm (Nhân viên)
+- Số lượng sản phẩm mà nhân viên đó bán (Nhân viên) -- THỐNG KÊ 
+- Số diện thoại
+- Email
+- Địa chỉ

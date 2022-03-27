@@ -1,0 +1,52 @@
+﻿@model WebBanMyPham.Models.SanPham
+
+@{
+    ViewBag.Title = "Thông tin sản phẩm - 3TS Shop";
+    Layout = "~/Views/Shared/_LayoutPageCommonClient.cshtml";
+}
+
+<h2>Thông tin sản phẩm</h2>
+
+<div class="card mb-3 border-dark">
+    <div class="row g-0">
+        <div class="col-md-4">
+            <img src="@Url.Content("~/Images/SP/" + Model.HinhAnh)" class="img-fluid rounded-start" alt="Hình sản phẩm">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title">@Model.TenSP</h5>
+                <div class="card-text">
+                    <table>
+                        <tr class="text-left">
+                            <td width="20%">Mô tả</td>
+                            <td class="text-justity">@Model.MoTa</td>
+                        </tr>
+
+                        <tr class="text-left">
+                            <td>Giá</td>
+                            <td style="font-weight: bold; color: red">@string.Format("{0:0,0 }", @Model.Gia)VNĐ</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="card-text mt-2">
+                    <a href="@Url.Action("ThemGioHang", "GioHang", new { @ms=Model.Id,@strURL=Request.Url.ToString()})" class="btn btnThemVoHang">THÊM VÀO VỎ HÀNG</a>
+                    <a href="~/Home/Index" class="btn btn-primary" style="float: right">MUA TIẾP</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<h2 class="text-center">Sản phẩm liên quan</h2>
+<div class="position-relative" style="height: 5px">
+    <div class="position-absolute top-0 start-50 translate-middle m-0 border border-dark" style="width: 25%;"></div>
+</div>
+<style>
+    .btnThemVoHang {
+        background: rgb(253, 126, 20);
+    }
+    .btnThemVoHang:hover {
+        background: rgba(253, 126, 20, .8);
+    }
+</style>
+@*các sp liên quan*@
+@Html.Action("SanPhamLQ", new { maLoai = @Model.IdLoaiSP, tenSp = @Model.TenSP })

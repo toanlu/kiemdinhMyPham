@@ -1,0 +1,50 @@
+﻿@{
+    ViewBag.Title = "DangNhap";
+    Layout = "~/Views/Shared/_LayoutPageLogin.cshtml";
+}
+
+<div class="container text-center mt-4">
+    @using (Html.BeginForm())
+    {
+        <div class="w-50 mx-auto">
+            <h1 class="mb-3 fw-normal">Đăng Nhập</h1>
+
+            <div class="form-floating">
+                <input id="floatingInputSignin" class="form-control mb-2" name="username" placeholder="username" />
+                <label for="floatingInputSignin">Username</label>
+            </div>
+            <div class="form-floating">
+                <input id="floatingPasswordSignin" class="form-control mb-2" type="password" name="pw" placeholder="Password" />
+                <label for="floatingPasswordSignin">Password</label>
+            </div>
+            <button id="btnSignin" title="Sign in" class="w-100 btn btn-lg text-white" style="background-color: steelblue">Đăng nhập</button>
+        </div>
+    }
+    <div class="w-50 mx-auto mt-2">
+        <button id="btnSignup" class="w-100 btn btn-lg text-white" style="background-color: steelblue" data-bs-toggle="modal" data-bs-target="#modalSignup" title="Sign up">Đăng ký</button>
+    </div>
+</div>
+
+@if (@ViewBag.Info == "Empty")
+{
+    <script>
+        Toast.fire({
+            icon: 'warning',
+            title: '@ViewBag.Message'
+        });
+    </script>
+}
+else if (@ViewBag.Info == "incorrect")
+{
+    <script>
+        Toast.fire({
+            icon: 'warning',
+            title: '@ViewBag.Message'
+        });
+    </script>
+}
+
+
+<script type="text/javascript">
+    var modalSignup = new bootstrap.Modal(document.getElementById('modalSignup'))
+</script>

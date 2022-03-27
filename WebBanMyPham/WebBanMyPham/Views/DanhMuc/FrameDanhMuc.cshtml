@@ -1,0 +1,28 @@
+﻿@model List<WebBanMyPham.Models.DanhMuc>
+
+<div class="card px-3 w-100" style="width: 18rem;">
+    <div class="card-header text-white fw-bold mauChuDao">
+        DANH MỤC
+    </div>
+    @foreach (var dMuc in Model)
+    {
+        <ul class="list-unstyled ps-0">
+            <li class="mb-1">
+                <button class="btn btn-toggle w-100 align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#collapse_@dMuc.Id" aria-expanded="false">
+                    @dMuc.TenDanhMuc
+                </button>
+                <div class="collapse" id="collapse_@dMuc.Id" style="">
+                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                        @foreach (var lsp in dMuc.LstLoaiSP)
+                        {
+                            <li>
+                                @Html.ActionLink(@lsp.TenLoai, "SanPhamTheoLoai", "SanPham", new { maLoai = @lsp.Id }, new { @class = "link-dark rounded" })
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    }
+
+</div>
